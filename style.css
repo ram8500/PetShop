@@ -1,0 +1,669 @@
+/* /* ここからテンプレ */
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  color: #333;
+  line-height: 2.0;
+}
+
+h2,h3,h4,h5 {
+  margin: 0;
+  padding: o;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+ul,li,dl,dt,dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.btn {
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 1;
+}
+.fa {
+  margin-right: 5px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  transition: 3s;
+  opacity: 0.6;
+}
+.content-wrapper {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+
+/* /* ここからheader */
+.header {
+  width: 100%;
+}
+.header h1 {
+  font-size: 3rem;
+  margin: 0 210px 0 0;
+}
+.header-nav {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.header nav ul {
+  display: flex;
+  align-items: center;
+}
+.header nav ul li {
+  margin-right: 50px;
+  line-height: 65px;
+  padding: 0 25px;
+  color: #333;
+  cursor: pointer;
+}
+.header nav a {
+  display: block;
+}
+.header nav ul li:hover {
+  background-color: rgb(245, 241, 195);
+}
+.header-login {
+  float: right;
+  transition: all 0.5s;
+}
+.header-login:hover {
+  background-color: rgb(245, 241, 195);
+}
+.header-login .login {
+  line-height: 65px;
+  padding: 0 25px;
+  color: #333;
+  cursor: pointer;
+  display: block;
+}
+
+/*モーダル*/
+
+.login-modal-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+.modal {
+  position: absolute;
+  top: 20%;
+  left: 34%;
+  background-color: #e6ecf0;
+  padding: 20px 0 40px;
+  border-radius: 10px;
+  width: 450px;
+  text-align: center;
+  height: auto;
+}
+
+.fa-times {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(128, 128, 128, 0.46);
+  cursor: pointer;
+}
+
+#signup-form, #login-form {
+  width: 100%;
+}
+
+#signup-form h2, #login-form h2 {
+  color: #5f5d60;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+#signup-form input, #login-form input {
+  width: 320px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  padding: 12px 12px;
+  border: 1px solid #d0d5d8;
+  border-radius: 5px;
+}
+
+#submit-btn {
+  display: inline-block;
+  padding: 14px 140px;
+  background-color: rgb(193, 238, 250);
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin: 10px auto;
+  cursor: pointer;
+}
+#submit-btn:hover {
+  background-color: rgb(95, 217, 251);
+}
+
+
+/* ここからメインビジュアル */
+.mainvisual {
+  position: relative;
+  height: 600px;
+}
+.mainvisual img {
+  width: 70%;
+  height: 500px;
+  object-fit: cover;
+  margin-left: 30%;
+}
+.mainvisual h2 {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  background: rgba(255,255,255,0.6);
+  font-size: 3rem;
+  padding: 1rem;
+}
+.bg1 {
+  background: rgb(193, 238, 250);
+  height: 300px;
+  width: 22%;
+  border-radius: 50%;
+  position: absolute;
+  top: -34%;
+  left: -68px;
+  z-index: -1;
+}
+.bg2 {
+  background: rgb(193, 238, 250);
+  height: 300px;
+  width: 22%;
+  border-radius: 50%;
+  position: absolute;
+  top: 17%;
+  left: 239px;
+  z-index: -1;
+}
+/* ここからペットを探す */
+.search h2 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.search .contents {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+}
+.search .contents figure {
+  width: 50%;
+}
+.search .content {
+  width: 48%;
+}
+.bg3 {
+  background: rgb(193, 238, 250);
+  height: 300px;
+  width: 22%;
+  border-radius: 50%;
+  position: absolute;
+  top: 63%;
+  left: 582px;
+  z-index: -1;
+}
+
+/* ここから店を探す */
+.shop {
+  width: 100%;
+  padding-top: 40px;
+  position: relative;
+}
+.shop::before {
+  content: '';
+  background: rgb(245, 241, 195);
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+}
+.shop h2 {
+  margin-bottom: 60px;
+  text-align: center;
+}
+.shop ul {
+  display: flex;
+  justify-content: space-between;
+  width: 1400px;
+  margin: 0 auto;
+}
+.shop ul li {
+  width: 400px;
+}
+.shop ul li figure {
+  margin: 0;
+}
+/* ここからよくある質問 */
+.faq-wrapper {
+  background-color: rgb(193, 238, 250);
+  text-align: center;
+  padding: 80px 0;
+  color: #333;
+  width: 100%;
+  margin: 50px auto;
+  margin-bottom: 180px;
+}
+.heading h2{
+  margin-bottom: 2rem;
+}
+#faq-list {
+  width: 50%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+.faq-list-item {
+  margin:10px;
+  border-bottom:1px solid rgb(189, 189, 189);
+  position:relative;
+  cursor:pointer;
+  text-align: left;
+}
+.faq-list-item h3 {
+  font-size: 14px;
+}
+.faq-list-item span {
+  position:absolute;
+  top:0;
+  right:5px;
+  color:rgb(189, 189, 189);
+  font-size:13px;
+}
+.answer {
+  font-size: 12px;
+  display: none;
+  padding: 5px 0px;
+  margin-bottom: 15px;
+}
+/* ここからお問い合わせ */
+.contact {
+  position: relative;
+}
+.contact-img img {
+  width: 80%;
+  height: 400px;
+  margin-right: 20%;
+  object-fit: cover;
+}
+.contact-img::after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.4);
+}
+.contact h2 a {
+  position: absolute;
+  top: 45%;
+  right: 52%;
+  width: 250px;
+  height: 60px;
+  background-color: rgba(255,255,255,0.6);
+  line-height: 60px;
+  text-align: center;
+}
+.contact h2 a:hover {
+  background: rgb(245, 241, 195); 
+}
+.bg {
+  position: absolute;
+  background: rgb(245, 241, 195);
+  height: 400px;
+  width: 45%;
+  top: -20%;
+  right: 0;
+  z-index: -1;
+}
+/* ここからフッター */
+footer .content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+}
+.address p {
+  line-height: 1.8;
+}
+footer ul {
+  display: flex;
+}
+footer ul li {
+  margin-right: 50px;
+}
+.footer ul li {
+  margin-right: 50px;
+  line-height: 65px;
+  padding: 0 25px;
+  color: #333;
+  cursor: pointer;
+}
+.footer nav a {
+  display: block;
+}
+.footer  ul li:hover {
+  background-color: rgb(245, 241, 195);
+}
+.copylight p {
+  text-align: center;
+  font-size: 0.75rem;
+  margin: 0;
+  line-height: 100px;
+  color: #333;
+  background-color: #e8e7e7;
+}
+/* ここからスマホのレスポンシブ */
+@media screen and (max-width:670px) {
+  /* ここからヘッダー */
+  .header-nav {
+    width: 100%;
+  }
+  .header-nav nav {
+    display: none; 
+  }
+  /* ここからフッター */
+ .footer {
+   width: 100%;
+ }
+ .footer .address p {
+   font-size: 15px;
+ }
+ footer .content-wrapper {
+  display: block;
+  width: 100%;
+  text-align: center;
+ }
+ footer ul {
+  display: block;
+ }
+ footer ul li {
+   margin-right: 0;
+   padding: 20px 0;
+ }
+ /* ここからメイン */
+ .mainvisual img {
+   margin: 0;
+   width: 100%;
+   height: auto;
+ }
+ .mainvisual {
+   height: 390px;
+ }
+ .mainvisual h2 {
+   font-size: 1.5rem;
+   position: absolute;
+   top: 20%;
+   left: 50%;
+ }
+ .bg1 {
+  height:200px;
+  width: 53%;
+  position: absolute;
+  top: -30%;
+  left: -40px;
+ }
+ .bg2 {
+  height:170px;
+  width: 46%;
+  position: absolute;
+  top: 47%;
+  left: 243px;
+ }
+ .content-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+/* ここからペットを探す */
+ .search {
+   width: 100%;
+ }
+ .search .contents {
+   display: block;
+   width: 100%;
+ }
+ .search .contents figure {
+   margin: 0;
+   width: 100%;
+ }
+ .search .content {
+   width: 100%;
+   text-align: center;
+ }
+ .search .content h2 {
+   margin: 50px 0;
+ }
+ /* ここから店を探す */
+ .shop {
+   width: 100%;
+ }
+ .shop .content-wrapper h2 {
+   margin: 50px 0;
+ }
+ .shop ul {
+   display: block;
+   width: 100%;
+ }
+ .shop figure img {
+   width: 100%;
+   margin: 0;
+ }
+ .shop ul li {
+  padding: 10px 0;
+ }
+ /* ここからよくある質問 */
+ .faq .faq-wrapper{
+   margin: 0;
+   padding: 0;
+ }
+#faq-list {
+  width: 100%;
+  margin: 0;
+}
+.faq-list-item {
+  width: 90%;
+}
+.content-wrapper h2 {
+   margin: 50px 0;
+ }
+.content-wrapper nav li {
+   margin: 0;
+ }
+ /* ここからお問合せ */
+ .contact{
+   margin-top: 100px;
+ }
+ .contact-img img {
+  margin: 0;
+  width: 99%;
+}
+.contact h2 a {
+  text-align: center;
+  position: absolute;
+  top: 46%;
+  right: 15%;
+}
+}
+/* ここからタブレット対応 */
+@media screen and (min-width:768px) and (max-width:1024px) {
+  /* ここからヘッダー */
+  .header-nav {
+    width: 100%;
+  }
+  .header-nav nav {
+    display: block;
+  }
+  .header nav ul li {
+    height: auto;
+    font-size: 0.8rem;
+    padding: 0;
+  }
+  /* ここからフッター */
+ .footer {
+   width: 100%;
+ }
+ .footer .address p {
+   font-size: 2rem;
+ }
+ .footer .address h2 {
+  font-size: 3rem;
+}
+ footer .content-wrapper {
+  display: block;
+  width: 100%;
+  text-align: center;
+ }
+ footer ul {
+  display: block;
+ }
+ footer ul li {
+   margin-right: 0;
+   padding: 20px 0;
+   font-size: 1.5rem;
+   display: inline-block;
+ }
+ /* ここからメイン */
+ .mainvisual img {
+   margin: 0;
+   width: 100%;
+   height: auto;
+ }
+ .mainvisual {
+   height: auto;
+ }
+ .mainvisual h2 {
+   font-size: 3rem;
+   position: absolute;
+   top:77%;
+   left: 66%;
+ }
+ .bg1 {
+  height:200px;
+  width: 20%;
+  position: absolute;
+  top: -20%;
+  left: -40px;
+ }
+ .bg2 {
+  height: 200px;
+  width: 20%;
+  border-radius: 50%;
+  position: absolute;
+  top: 91%;
+  left: 800px;
+  z-index: -1;
+ }
+ .content-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+/* ここからペットを探す */
+ .search {
+   width: 100%;
+   margin: 220px 0 0 0;
+ }
+ .search .contents {
+   display: block;
+   width: 100%;
+ }
+ .search .contents figure {
+   margin: 0;
+   width: 100%;
+ }
+ .search .content {
+   width: 100%;
+   text-align: center;
+ }
+ .search .content h2 {
+   font-size: 3rem;
+ }
+ .search .content p {
+  margin: 50px 0;
+  font-size: 2rem;
+}
+ .bg3 {
+  height:194px;
+  width: 20%;
+  position: absolute;
+  top: 63%;
+  left: 71px;
+}
+ /* ここから店を探す */
+ .shop {
+  width: 100%;
+}
+.shop .content-wrapper h2 {
+  margin: 50px 0 0 0;
+  font-size: 3rem;
+}
+.shop ul {
+  display: block;
+  width: 100%;
+}
+.shop figure img {
+  width: 100%;
+  margin: 0;
+}
+.shop ul li {
+  width: 100%;
+ padding: 100px 0;
+}
+ /* ここからよくある質問 */
+ .faq .faq-wrapper{
+   margin: 0;
+   padding: 0;
+   font-size: 3rem;
+ }
+#faq-list {
+  width: 100%;
+  margin: 0;
+}
+.faq-list-item {
+  width: 90%;
+}
+.faq-list-item h3{
+  font-size: 2rem;
+}
+.faq-list-item p {
+  font-size: 2rem;
+}
+.faq-list-item span{
+  font-size: 2rem;
+}
+ /* ここからお問合せ */
+ .contact{
+   margin-top: 100px;
+ }
+ .contact-img img {
+  margin: 0;
+  width: 99%;
+}
+.contact h2 a {
+  text-align: center;
+  position: absolute;
+  top: 46%;
+  right: 15%;
+}
+}
