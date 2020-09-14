@@ -44,8 +44,9 @@ a:hover {
   width: 1400px;
   margin: 0 auto;
 }
-
-
+.wrap {
+  overflow: hidden;
+}
 /* /* ここからheader */
 .header {
   width: 100%;
@@ -384,6 +385,11 @@ footer ul li {
   .header-nav nav {
     display: none; 
   }
+  .header-login {
+    position: absolute;
+    top: 23px;
+    left: 259px;
+  }
   /* ここからフッター */
  .footer {
    width: 100%;
@@ -455,6 +461,15 @@ footer ul li {
  .search .content h2 {
    margin: 50px 0;
  }
+ .bg3 {
+  height: 170px;
+  width: 46%;
+  border-radius: 50%;
+  position: absolute;
+  top: 83%;
+  left: -36px;
+  z-index: -1;
+ }
  /* ここから店を探す */
  .shop {
    width: 100%;
@@ -464,15 +479,20 @@ footer ul li {
  }
  .shop ul {
    display: block;
-   width: 100%;
+   width: 84%;
+   text-align: center;
  }
  .shop figure img {
-   width: 100%;
-   margin: 0;
+   width: 80%;
+   display: block;
  }
  .shop ul li {
   padding: 10px 0;
  }
+ .shop::before {
+  height: 1408px;
+}
+
  /* ここからよくある質問 */
  .faq .faq-wrapper{
    margin: 0;
@@ -495,9 +515,20 @@ footer ul li {
  .contact{
    margin-top: 100px;
  }
- .contact-img img {
-  margin: 0;
-  width: 99%;
+
+.contact-img img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.contact-img::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.4);
 }
 .contact h2 a {
   text-align: center;
@@ -512,12 +543,19 @@ footer ul li {
   .header-nav {
     width: 100%;
   }
+  .header h1{
+    margin-right: 60px;
+    font-size: 2.5rem;
+  }
+  .header-nav a {
+    font-size: 0.6rem;
+  }
   .header-nav nav {
     display: block;
   }
   .header nav ul li {
     height: auto;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     padding: 0;
   }
   /* ここからフッター */
@@ -538,8 +576,8 @@ footer ul li {
  footer ul {
   display: block;
  }
- footer ul li {
-   margin-right: 0;
+ .footer ul li {
+   margin: 0 20px;
    padding: 20px 0;
    font-size: 1.5rem;
    display: inline-block;
@@ -556,23 +594,23 @@ footer ul li {
  .mainvisual h2 {
    font-size: 3rem;
    position: absolute;
-   top:77%;
-   left: 66%;
+   top:46%;
+   left: 53%;
  }
  .bg1 {
   height:200px;
-  width: 20%;
+  width: 27%;
   position: absolute;
-  top: -20%;
+  top: -24%;
   left: -40px;
  }
  .bg2 {
   height: 200px;
-  width: 20%;
+  width: 27%;
   border-radius: 50%;
   position: absolute;
-  top: 91%;
-  left: 800px;
+  top: 83%;
+  left: 524px;
   z-index: -1;
  }
  .content-wrapper {
@@ -597,15 +635,15 @@ footer ul li {
    text-align: center;
  }
  .search .content h2 {
-   font-size: 3rem;
+   font-size: 2.5rem;
  }
  .search .content p {
   margin: 50px 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
  .bg3 {
-  height:194px;
-  width: 20%;
+  height:200px;
+  width: 27%;
   position: absolute;
   top: 63%;
   left: 71px;
@@ -616,7 +654,7 @@ footer ul li {
 }
 .shop .content-wrapper h2 {
   margin: 50px 0 0 0;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 .shop ul {
   display: block;
@@ -629,6 +667,9 @@ footer ul li {
 .shop ul li {
   width: 100%;
  padding: 100px 0;
+}
+.shop::before {
+  height: 3034px;
 }
  /* ここからよくある質問 */
  .faq .faq-wrapper{
@@ -663,7 +704,10 @@ footer ul li {
 .contact h2 a {
   text-align: center;
   position: absolute;
-  top: 46%;
-  right: 15%;
+  top: 73%;
+  right: 58%;
+}
+.contact-img::after {
+  width: 0;
 }
 }
